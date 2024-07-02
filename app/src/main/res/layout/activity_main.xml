@@ -6,12 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/vg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:src="@drawable/ic_weight"
+            android:layout_margin="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/white"/>
+        
+        <TextView
+            android:text="calculadora IMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/btn_calcular"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,32 +46,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_peso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Digite seu peso ex: 70.200"
-            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bg"
         android:layout_margin="16dp"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_altura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="Digite sua altura ex: 1.70" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_height"
+        android:hint="Digite sua altura ex: 1.70"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        app:layout_constraintTop_toBottomOf="@+id/edt_peso"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_peso"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/rounded_bg"
+        android:drawableEnd="@drawable/ic_weight"
+        android:hint="Digite seu peso ex: 70.200"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        app:layout_constraintTop_toBottomOf="@+id/vg_header"
+        tools:layout_editor_absoluteX="19dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
