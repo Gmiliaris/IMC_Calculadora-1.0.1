@@ -10,17 +10,17 @@ Intuitive Interface: Simple and user-friendly design for a pleasant user experie
 <img src="https://github.com/Gmiliaris/IMC_Calculadora-1.0.1/assets/102425980/d496632c-3a24-4fab-8dbf-b57d852af19b" width="260">&emsp;<img src="https://github.com/Gmiliaris/IMC_Calculadora-1.0.1/assets/102425980/9c208aa4-698e-48d9-b52f-0459ac430ae3" width="260">
 
 ## Technology
--Activity
--Intent
--Snackbar
--ViewGroups 
-    -LinearLayout
-    -ConstraintLayout
--Views
-    -ImageView
-    -TextView
-    -EditText
-    -Button
+* Activity
+* Intent
+* Snackbar
+* ViewGroups 
+    * LinearLayout
+    * ConstraintLayout
+* Views
+    * ImageView
+    * TextView
+    * EditText
+    * Button
 
 
 ## License
